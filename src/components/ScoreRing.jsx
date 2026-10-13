@@ -1,0 +1,2 @@
+export function ScoreRing({ score, label = 'CRS' }) { const value = Number.isFinite(score) ? score : null; const degrees = value === null ? 0 : Math.max(0, Math.min(100, value)) * 3.6; return <div className="score-ring-wrap"><div className={`score-ring ${value === null ? 'is-unknown' : ''}`} style={{ '--score-degrees': `${degrees}deg` }}><div><strong>{value === null ? '—' : value}</strong><span>/ 100</span></div></div><span className="score-ring-label">{label}</span></div>; }
+
